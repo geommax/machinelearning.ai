@@ -102,3 +102,25 @@ C:/Users/bot/AppData/Local/Programs/Python/Python310/python.exe d:/00_google_cla
 & C:/Users/bot/AppData/Local/Programs/Python/Python310/python.exe d:/00_google_classroom/machinelearning.ai/02_transfer_learning/03_yolo/009_data_yaml.py
 Created config file at D:\Project12_Yolo_Face\data\data.yaml
 ```
+
+
+#### 2.3.1 Setup testing env on mac m1 for yolo model
+
+https://conda-forge.org/download/
+
+```bash
+install conda-forge
+```
+
+```bash
+echo ". ~/miniforge3/etc/profile.d/conda.sh" >> ~/.zshrc
+source ~/.zshrc
+conda --version
+```
+
+#### 2.3.2 Testing with command line
+
+```bash
+yolo task=detect mode=predict model=best.pt source=0 imgsz=640 device=cpu
+```
+
