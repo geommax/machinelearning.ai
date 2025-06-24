@@ -5,10 +5,12 @@ import numpy as np
 from PIL import Image
 from torchvision import transforms
 from facenet_pytorch import InceptionResnetV1
+from sklearn.svm import SVC
 
 # Load FaceNet model (embedding only)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = InceptionResnetV1(pretrained='vggface2', classify=False).eval().to(device)
+clf = SVC(probability=True)
 
 # Load classifier model
 classifier = joblib.load("svm_classifier.joblib")
@@ -36,7 +38,12 @@ def detect_faces(frame):
 
 # Prediction
 def predict_person(embedding):
-    return classifier.predict([embedding])[0]
+    probs = classifier.predict_proba([embedding])[0]
+    max_idx = np.argmax(probs)
+    name = classifier.classes_[max_idx]
+    prob = probs[max_idx]
+    return str(name), float(prob)
+
 
 # Main loop
 def run():
@@ -52,12 +59,20 @@ def run():
             face = frame[y:y+h, x:x+w]
             try:
                 embedding = extract_face_embedding(face)
-                name = predict_person(embedding)
+                name, prob = predict_person(embedding)
+
+                # Optional threshold
+                if prob < 0.6:
+                    label = "Unknown"
+                else:
+                    label = f"{name} ({prob:.2f})"
+
             except Exception:
-                name = "Unknown"
+                label = "Unknown"
 
             cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
-            cv2.putText(frame, name, (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 0), 2)
+            cv2.putText(frame, label, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 0), 2)
+
 
         cv2.imshow("Face Recognition", frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
