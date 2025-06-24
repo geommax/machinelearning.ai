@@ -93,3 +93,12 @@ SVM is a popular and effective classifier, especially for high-dimensional data 
 
 
 ### 2.3 Object Regonition YOLO
+
+```bash
+C:/Users/bot/AppData/Local/Programs/Python/Python310/python.exe d:/00_google_classroom/machinelearning.ai/02_transfer_learning/03_yolo/009_train_valid_split_windows.py --datapath "D:\Project12_Yolo_Face\data" --train_pct 0.9
+```
+
+```bash
+& C:/Users/bot/AppData/Local/Programs/Python/Python310/python.exe d:/00_google_classroom/machinelearning.ai/02_transfer_learning/03_yolo/009_data_yaml.py
+Created config file at D:\Project12_Yolo_Face\data\data.yaml
+```
