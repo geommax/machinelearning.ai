@@ -124,16 +124,16 @@ conda --version
 yolo task=detect mode=predict model=best.pt source=0 imgsz=640 device=cpu
 ```
 
-##### data.yaml: 
+#### data.yaml: 
 (Input) Describes your dataset (paths to images/labels, class names, number of classes).
 
-##### model.yaml: 
+#### model.yaml: 
 (Input, or generated if using a pre-trained model as a base and saving its architecture) Defines the architecture of the YOLO model (number of layers, channels, etc.).
 
-##### args.yaml (or similar, outputted by Ultralytics): 
+#### args.yaml (or similar, outputted by Ultralytics): 
 After a training run, Ultralytics YOLO often saves an args.yaml file within the run directory. This file captures all the arguments that were used for that specific training run, making it easy to reproduce the experiment or understand exactly what settings were applied.
 
-### 3.0 Inference Yolo Models On ...
+## 3.0 Inference Yolo Models On ...
 
 #### 3.1 Exported Model Formats (e.g., .onnx, .tflite, .engine)
 What it is: These are optimized versions of your trained model, converted from the original PyTorch format (.pt) into formats more suitable for deployment on specific hardware or software environments. This conversion often involves optimizations for inference speed and memory footprint.
@@ -143,9 +143,9 @@ Varies depending on the target platform.
 
 Location: Typically in runs/detect/export/your_run_name/ or directly in the weights/ folder if exported from there.
 
-##### Common Export Formats:
+## Common Export Formats:
 
-##### 3.2.1 filename.onnx: 
+### 3.2.1 filename.onnx: 
 
 ONNX (Open Neural Network Exchange) is an open standard for representing machine learning models. It allows models trained in one framework (like PyTorch) to be easily used in another (like TensorFlow, ONNX Runtime). Highly portable.
 
@@ -159,7 +159,7 @@ filename.xml and filename.bin: OpenVINO format. For Intel hardware.
 
 filename.pth: Sometimes models are saved in .pth which is also a PyTorch format, similar to .pt.
 
-#####  3.2.2 Usage:
+### 3.2.2 Usage:
 
 Deployment: Load these models into your application for real-time inference on various edge devices, servers, or web services.
 
