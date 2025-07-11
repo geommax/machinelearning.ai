@@ -1,0 +1,27 @@
+**Probability distributions** ကိုအကြမ်းဖျင်းအားဖြင့် **၂ မျိုး** ခွဲလို့ရပါတယ်—
+
+1. **Discrete Distributions**
+   တိတိကျကျ တန်ဖိုးတွေအတွက်သာ probability ရှိတယ်။
+   ဥပမာ - Binomial distribution, Poisson distribution, etc.
+   ➤ $P(X = x)$ ဆိုတာက meaningful ဖြစ်တယ်။
+
+2. **Continuous Distributions**
+   တစ်ခုနဲ့တစ်ခုအကြားမှာတောင် တန်ဖိုးရှိနိုင်တယ် (infinite possibilities).
+   ဥပမာ - Normal distribution, Exponential distribution, etc.
+   ➤ $P(X = x) = 0$ ဖြစ်တယ်။ Instead, we calculate **probability density** and **interval probabilities** like $P(a < X < b)$။
+
+
+ Continuous variable တွေဟာ continuous distributions နဲ့ဖော်ပြရတာမို့
+
+---
+
+ပိုလေ့လာချင်တယ်ဆိုရင် သက်ဆိုင်ရာအကြောင်းအရာတွေ:
+
+* **Probability density function (PDF)**
+* **Cumulative distribution function (CDF)**
+* **Examples of continuous distributions:**
+
+  * Normal distribution
+  * Uniform distribution
+  * Exponential distribution
+

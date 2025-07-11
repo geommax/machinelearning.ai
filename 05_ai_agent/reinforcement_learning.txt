@@ -1,0 +1,61 @@
+RLHF & RLAIF 
+-=-=--=-=-=-==-=-=-=-=-=-=-
+
+1. Pre-Trained Model
+2. Supervised Fine Tuning (Label and Add features by engineers)
+3. Reward Model Training (User feedback) 
+4. policy Optimization (Maximize Reward) PPO
+(Proximal Policy Optimization)
+- Limit how much policies can be updated in each training iteration.
+
+
+AI Agent (Multi Agents System)
+-=-=--=-=-=-==-=-=-=-=-=-=-
+
+- 1 . Simple Reflex Agent   (Reacts) - No History
+- 2 . Model Based Reflex Agent  (Remember ) 
+- 3 . Goal Based Agent  ( AIMS) 
+- 4 . Utility Based Agent  (EVALS. )
+- 5 . Learning Agent  (IMPROVEMENT)
+
+Gen AI, AI Agent , Agentic AI 
+-=-=--=-=-=-==-=-=-=-=-=-=-
+
+Agentic AI Framework 
+- Agno
+- Crew AI
+- Langgraph 
+- Microsoft Autogen 
+
+
+Reinforcement Learning Series - Syllabus
+=-=-=-=-=-=-=-=-=-
+Markov Decision Processes (MDPs)
+  -  Decision Maker (Agent) 
+  -  Observing environment state 
+ ( Agent > Env > S State > A Action > R Rewards)
+  ( St , At) (S t+1 > S) (R t+1 > R)
+f (St,At) = Rt+1 
+
+* MDP Notation *
+( Agent > Env > S State > A Action > R Rewards)
+  ( St , At) (S t+1 > S) (R t+1 > R)
+f (St,At) = Rt+1 
+
+Rt and St have well defined probability distributions .
+
+expected return vs discounted return 
+=-=-=-=-=-=-=
+Gt = Rt+1 + Rt+2 ... RT, 
+the agent's goal is to maximize the expected return of rewards. 
+
+- Sub sequences .. >> episodes >> episodic tasks 
+- Continuing Tasks. 
+ 
+ 
+Q-Learning 
+DQN
+Plicy Gradients 
+Bellman Equations 
+
+- Part 1. 
