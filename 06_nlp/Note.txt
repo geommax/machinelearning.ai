@@ -1,0 +1,82 @@
+https://poloclub.github.io/transformer-explainer/
+https://transformer-circuits.pub/2021/framework/index.html
+https://github.com/karpathy/nanoGPT
+
+
+
+What is Transformer?
+ 	Transformer is a neural network architecture used for performing machine learning tasks particularly in natural language processing (NLP) and computer vision.
+
+Transformers Vs RNN(Recurrent Neural Network)
+ 
+ **Transformers VS RNN(Recurrent Neural Network)
+ 
+| Aspect                 | RNN        | Transformer                   |
+| ---------------------- | ---------- | ----------------------------- |
+| Sequence Processing    | Sequential | Parallel                      |
+| Long-term Dependencies | Weak       | Strong                        |
+| Speed                  | Slow       | Fast                          |
+| Scalability            | Limited    | Highly scalable               |
+| Interpretability       | Harder     | Easier with attention weights |
+| Model Examples         | LSTM, GRU  | BERT, GPT, T5                 |
+
+
+Why Need For Transformers Model in Machine Learning ?
+•	Transformer Architecture uses self-attention to transform one whole sentence into a single sentence.
+•	This is useful where older models work step by step and it helps overcome the challenges seen in models like RNNs and LSTMs.
+•	Traditional models like RNNs (Recurrent Neural Networks) suffer from the vanishing gradient problem which leads to long-term memory loss.
+•	RNNs process text sequentially meaning they analyze words one at a time.
+
+Applications of Transformers
+	Some of the applications of transformers are:
+•	NLP Tasks: Transformers are used for machine translation, text summarization, named entity recognition and sentiment analysis.
+•	Speech Recognition: They process audio signals to convert speech into transcribed text.
+•	Computer Vision: Transformers are applied to image classification, object detection and image generation.
+•	Recommendation Systems: They provide personalized recommendations based on user preferences.
+•	Text and Music Generation: Transformers are used for generating text like articles and composing music.
+
+Introduction to Transformer Attention
+•	Transformers are key technology in large language models, first introduced in the 2017 paper "Attention is All You Need".
+•	The goal is to take input text and predict the next word.
+•	Input text is broken into tokens, often words or pieces of words.
+•	Each token is initially associated with a high-dimensional embedding vector that encodes its meaning and position, without context.
+
+
+
+The Need for Contextual Understanding
+•	Words can have different meanings depending on context, like "mole" in "American shrew mole," "one mole of carbon dioxide," or "take a biopsy of the mole."
+•	The initial token embedding is the same for "mole" in all cases because it's a lookup table without context.
+•	The transformer aims to adjust these embeddings to incorporate richer contextual meaning.
+•	For example, the generic embedding for "tower" should be updated by context like "Eiffel" or "miniature" to encode more specific meaning.
+•	 (e.g.,
+•	 If the word "tower" is preceded by "Eiffel," the embedding should shift to encode the specific concept of the "Eiffel Tower," associating it with related ideas like Paris, France, and steel construction.
+•	If instead "tower" is preceded by "miniature," the embedding should adjust to represent a smaller, less imposing tower, moving away from the general notion of large, tall structures.)
+•	Ultimately, the final vector for a word must encode all relevant context to predict the next token accurately.
+
+Understanding Attention in NLP
+•	The goal of self attention mechanism is to improve performance of traditional models such as encoder-decoder models used in RNNs (Recurrent Neural Networks).
+•	 In traditional encoder-decoder models input sequence is compressed into a single fixed-length vector which is then used to generate the output.
+•	This works well for short sequences but struggles with long ones because important information can be lost when compressed into a single vector.
+•	To overcome this problem self attention mechanism was introduced.
+
+Self-Attention
+Self-attention is a key mechanism in Transformers that allows the model to capture relationships between all words in a sequence, regardless of their position. It helps the model focus on relevant words when processing each token, making it especially useful for tasks like translation and text generation. Attention scores are computed as:
+		Attention(Q,K,V)=softmax((Q.K(pow)T)/sqrt(d(sup)k).v
+		
+Here’s how the self-attention mechanism works:
+
+1.	Input Vectors and Weight Matrices:  Each encoder input vector is multiplied by three trained weight matrices to generate the key, query and value vectors.
+2.	Query-Key Interaction: To calculate attention scores, multiply the query vector of the current input with the key vectors of all other inputs. This measures how much focus the model should place on each part of the input sequence.
+3.	Scaling Scores: Attention scores are scaled by dividing by the square root of the key vector’s dimension (typically √64 = 8) to keep the values stable and prevent them from becoming too large.
+4.	Softmax Function: Apply the softmax function to the calculated attention scores to normalize them into probabilities.
+5.	Weighted Value Vectors: Multiply the softmax scores by the corresponding value vectors.
+6.	Summing Weighted Vectors: Sum the weighted value vectors to produce the self-attention output for the input.
+
+What is Multi-Head Attention?
+Multi-head attention extends self-attention by splitting the input into multiple heads, enabling the model to capture diverse relationships and patterns.
+
+Why Use Multiple Attention Heads?
+   Multi-head attention provides several advantages:
+•	Captures different relationships: Different heads attend to different aspects of the input.
+•	Improves learning efficiency: By operating in parallel, multiple heads allow for better learning of dependencies.
+•	Enhances robustness: The model doesn’t rely on a single attention pattern, reducing overfitting.		
