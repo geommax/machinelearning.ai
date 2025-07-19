@@ -1,0 +1,21 @@
+| Framework              | Recommended Model(s)                                      | Reason                                |
+| ---------------------- | --------------------------------------------------------- | ------------------------------------- |
+| **PyTorch**            | `resnet18`, `resnet50`, `mobilenet_v2`, `efficientnet_b0` | Easy to use from `torchvision.models` |
+| **TensorFlow / Keras** | `ResNet50`, `MobileNetV2`, `EfficientNetB0`, `VGG16`      | Built-in in `tf.keras.applications`   |
+
+| Category    | Examples from ImageNet Classes (used in pretraining) |
+| ----------- | ---------------------------------------------------- |
+| 🐶 Animals  | German shepherd, tabby cat, Persian cat, lion, horse |
+| 🛠️ Objects | Keyboard, pencil box, backpack, broom, computer      |
+| 🚗 Vehicles | Firetruck, airplane, mountain bike, car, tank        |
+| 🧱 Scenes   | Volcano, castle, church, stadium, seashore           |
+| 🍔 Food     | Hotdog, cheeseburger, espresso, pizza, mushroom      |
+| 👕 Clothing | Kimono, lab coat, jeans, bathing suit                |
+
+| Model           | Default Classes  | Source Dataset | Transferable To       |
+| --------------- | ---------------- | -------------- | --------------------- |
+| ResNet18/50     | 1,000 (ImageNet) | ImageNet       | Any image type        |
+| MobileNetV2     | 1,000 (ImageNet) | ImageNet       | Mobile apps, IoT      |
+| EfficientNet B0 | 1,000 (ImageNet) | ImageNet       | High-accuracy tasks   |
+| VGG16/VGG19     | 1,000 (ImageNet) | ImageNet       | Easy-to-visualize     |
+| InceptionV3     | 1,000 (ImageNet) | ImageNet       | Advanced architecture |
