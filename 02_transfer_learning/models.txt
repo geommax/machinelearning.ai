@@ -19,3 +19,6 @@
 | EfficientNet B0 | 1,000 (ImageNet) | ImageNet       | High-accuracy tasks   |
 | VGG16/VGG19     | 1,000 (ImageNet) | ImageNet       | Easy-to-visualize     |
 | InceptionV3     | 1,000 (ImageNet) | ImageNet       | Advanced architecture |
+
+https://docs.pytorch.org/tutorials/
+
