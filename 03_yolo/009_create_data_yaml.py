@@ -36,8 +36,8 @@ def create_data_yaml(path_to_classes_txt, path_to_data_yaml):
   return
 
 # Define path to classes.txt and run function
-path_to_classes_txt = r'D:\Project12_Yolo_Face\data\classes.txt'
-path_to_data_yaml = r'D:\Project12_Yolo_Face\data.yaml'
+path_to_classes_txt = r'C:\Users\bot\Desktop\YOLO\classes.txt'
+path_to_data_yaml = r'C:\Users\bot\Desktop\YOLO\data.yaml'
 
 create_data_yaml(path_to_classes_txt, path_to_data_yaml)
 

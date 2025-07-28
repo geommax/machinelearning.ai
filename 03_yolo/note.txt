@@ -1,5 +1,7 @@
 https://universe.roboflow.com/leo-ueno/people-detection-o4rdr
 
+https://app.clear.ml/projects/d559d8da7a3846d8ab5da4f628fc441a/tasks?columns=selected&columns=type&columns=name&columns=tags&columns=status&columns=project.name&columns=users&columns=started&columns=last_update&columns=last_iteration&columns=parent.name&order=-last_update&filter=
+
 
 What is Yolo ?
 
