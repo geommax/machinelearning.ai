@@ -2,3 +2,13 @@ https://huggingface.co/docs/transformers/en/models
 
 Starting.....
 On Going ....
+from_pretrained() API ကိုသုံးပြီးတော့ encode နဲ့ tokenizer.batch_decode ကိုစမ်းထား 
+model_id = "openai/whisper-large-v3" ကိုသုံးပြီး pipeline = pipeline(
+    "automatic-speech-recognition", လုပ်ကြည့်ထားတယ်၊ အချိန်အရမ်းကြာလို့ aborted လုပ်ထား
+pipeline("text-generation", model=AutoModelForCausalLM.from_pretrained(gpt2), tokenizer=tokenizer
+pipeline("image-segmentation", model="facebook/detr-resnet-50-panoptic"
+
+https://huggingface.co/datasets/cornell-movie-review-data/rotten_tomatoes
+Dataset ကို train နေတယ်။ 
+
+https://wandb.ai/kyawswartun-ai ထဲမှာ model ကို upload တင်ပေးသွားမယ်။
