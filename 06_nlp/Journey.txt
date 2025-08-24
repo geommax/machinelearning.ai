@@ -1,0 +1,36 @@
+Phase 2: Core NLP Concepts and Techniques
+=-=-=-=-=-=-=-=-=-=-=-=-
+Text Preprocessing
+	- Tokenization
+	- Stemming & Lemmatization 
+	- Stop Word Removal
+	- Handling special characters
+
+Text Representation 
+	- Bag-of-Words (BoW): 	
+	- TF-IDF (Term Frequency-Inverse Document Frequency)
+	- Word Embeddings - Word2Vec, GloVe
+Classical NLP Tasks 
+	- Text Classification 
+	- Named Entity Recognition (NER)
+	- Part-of-Speech (POS) Tagging
+
+Phase 3: Deep Learning and Transformers
+=-=-=-=-=-=-=-=-=-=-=-=-
+moving to Recurrent Neural Networks (RNNs) and their variants (LSTMs and GRUs) for sequential data.
+
+The Transformer Revolution:
+	- Attention Mechanism
+	- Transformers and their key components (Encoder-Decoder architecture)
+	- BERT models ( revolutionized transfer learning in NLP.)
+
+Large Language Models (LLMs):
+	- pre-trained LLMs
+	- Learn Prompt Engineering and Fine-Tuning To adapt pre-trained models
+	- Hugging Face's transformers library, which has become the standard for working with modern NLP models
+
+
+
+NLTK (Natural Language Toolkit)
+spaCy
+Hugging Face - transformers
